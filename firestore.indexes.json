@@ -1,0 +1,10 @@
+{
+  "indexes": [
+    {"collectionGroup": "conversations", "queryScope": "COLLECTION", "fields": [{"fieldPath": "ownerUid", "order": "ASCENDING"}, {"fieldPath": "updatedAt", "order": "DESCENDING"}]},
+    {"collectionGroup": "conversations", "queryScope": "COLLECTION", "fields": [{"fieldPath": "pageId", "order": "ASCENDING"}, {"fieldPath": "updatedAt", "order": "ASCENDING"}]},
+    {"collectionGroup": "comments", "queryScope": "COLLECTION", "fields": [{"fieldPath": "ownerUid", "order": "ASCENDING"}, {"fieldPath": "ts", "order": "DESCENDING"}]},
+    {"collectionGroup": "comments", "queryScope": "COLLECTION", "fields": [{"fieldPath": "pageId", "order": "ASCENDING"}, {"fieldPath": "ts", "order": "ASCENDING"}]},
+    {"collectionGroup": "reports", "queryScope": "COLLECTION", "fields": [{"fieldPath": "ownerUid", "order": "ASCENDING"}, {"fieldPath": "date", "order": "DESCENDING"}]}
+  ],
+  "fieldOverrides": []
+}

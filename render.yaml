@@ -1,0 +1,22 @@
+services:
+  - type: web
+    name: page-ai-bot
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app:app --workers 1 --threads 16 --timeout 120 --bind 0.0.0.0:$PORT
+    healthCheckPath: /health
+    envVars:
+      - {key: PYTHON_VERSION, value: 3.11.9}
+      - {key: FIREBASE_SERVICE_ACCOUNT_JSON, sync: false}
+      - {key: FB_APP_ID, sync: false}
+      - {key: FB_APP_SECRET, sync: false}
+      - {key: FB_VERIFY_TOKEN, sync: false}
+      - {key: APP_BASE_URL, sync: false}
+      - {key: SESSION_SECRET, sync: false}
+      - {key: ENCRYPTION_KEY, sync: false}
+      - {key: ADMIN_USERNAME, sync: false}
+      - {key: ADMIN_PASSWORD_HASH, sync: false}
+      - {key: CRON_SECRET, sync: false}
+      - {key: DEFAULT_GEMINI_KEY, sync: false}
+      - {key: DEFAULT_GROQ_KEY, sync: false}
