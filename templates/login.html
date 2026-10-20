@@ -1,0 +1,5 @@
+{% extends "base.html" %}{% block body %}
+<div class="card c"><h2>{{ 'অ্যাডমিন লগইন' if admin else 'লগইন' }}</h2>{% if err %}<p class="err">{{ err }}</p>{% endif %}
+<form method="post" action="{{ '/admin/login' if admin else '/login' }}"><input type="hidden" name="csrf" value="{{ csrf }}">
+<input name="username" placeholder="ইউজারনেম" autocomplete="username" required><input name="password" type="password" placeholder="পাসওয়ার্ড" autocomplete="current-password" required>
+<button class="btn">লগইন</button></form>{% if not admin %}<p><a href="/auth/facebook">Facebook দিয়ে লগইন</a></p>{% endif %}</div>{% endblock %}

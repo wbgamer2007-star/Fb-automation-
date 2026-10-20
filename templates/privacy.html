@@ -1,0 +1,6 @@
+{% extends "base.html" %}{% block body %}<div class="card"><h1>Privacy Policy</h1>
+<p>This service lets Facebook Page owners connect a Page so an AI assistant can answer Messenger messages and Page comments, and publish posts on the owner's request.</p>
+<h3>Data we collect</h3><p>Your Facebook name and ID; the Page access token of Pages you connect (stored encrypted); messages and comments sent to your connected Pages (kept for a limited retention period, default 30 days); the instructions and link sources you provide; optional AI API keys (stored encrypted); usage counters.</p>
+<h3>How we use it</h3><p>Only to provide the service: generating replies, showing your inbox and analytics, and creating daily reports. Message text is sent to the AI provider you or the service operator configured (e.g. Google Gemini, Groq) to generate replies. We do not sell data.</p>
+<h3>Deletion</h3><p>You can disconnect a Page any time from the dashboard. To delete all your data, remove the app from Facebook Settings &gt; Business Integrations (this triggers automatic deletion), or contact the operator. Deletion status: {{ base }}/deletion-status?code=YOUR_CODE.</p>
+<h3>Security</h3><p>Tokens and keys are encrypted at rest; access is limited to the account owner.</p></div>{% endblock %}

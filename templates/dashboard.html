@@ -1,0 +1,5 @@
+{% extends "base.html" %}{% block title %}ড্যাশবোর্ড{% endblock %}{% block body %}
+<meta name="csrf" content="{{ csrf }}">
+<header class="top"><b>🤖 ড্যাশবোর্ড</b><span id="who" class="mut"></span><form method="post" action="/logout"><input type="hidden" name="csrf" value="{{ csrf }}"><button class="sm">লগআউট</button></form></header>
+<nav id="tabs"></nav><main id="main"><p class="mut">লোড হচ্ছে…</p></main>{% endblock %}
+{% block scripts %}<script src="/static/dashboard.js"></script>{% endblock %}

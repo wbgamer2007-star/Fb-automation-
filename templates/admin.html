@@ -1,0 +1,5 @@
+{% extends "base.html" %}{% block title %}Admin{% endblock %}{% block body %}
+<meta name="csrf" content="{{ csrf }}">
+<header class="top"><b>🛠 অ্যাডমিন</b><form method="post" action="/admin/logout"><input type="hidden" name="csrf" value="{{ csrf }}"><button class="sm">লগআউট</button></form></header>
+<main id="main"><p class="mut">লোড হচ্ছে…</p></main>{% endblock %}
+{% block scripts %}<script src="/static/admin.js"></script>{% endblock %}

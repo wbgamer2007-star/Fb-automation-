@@ -1,0 +1,5 @@
+{% extends "base.html" %}{% block body %}
+<div class="card"><h2>পেজ বেছে নিন</h2>{% if not pages %}<p>কোনো পেজ পাওয়া যায়নি। ফেসবুক লগইনের সময় পেজ সিলেক্ট করেছেন কিনা দেখুন, তারপর <a href="/auth/facebook">আবার লগইন</a> করুন।</p>{% endif %}
+<form method="post" action="/connect"><input type="hidden" name="csrf" value="{{ csrf }}">
+{% for p in pages %}<label class="row"><input type="checkbox" name="page" value="{{ p.id }}"> {{ p.name }}</label>{% endfor %}
+{% if pages %}<button class="btn">কানেক্ট করুন</button>{% endif %}</form></div>{% endblock %}
